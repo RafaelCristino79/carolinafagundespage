@@ -140,6 +140,7 @@
 @media (max-width: 768px) {
   .services {
     padding: 56px 24px;
+    margin-top: 12px;
   }
 
   .services__heading h2 {
@@ -152,6 +153,11 @@
 }
 
 @media (max-width: 520px) {
+  .services {
+    padding-top: 40px;
+    margin-top: 0;
+  }
+
   .services__grid {
     grid-template-columns: 1fr;
   }

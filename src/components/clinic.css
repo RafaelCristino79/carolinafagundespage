@@ -132,6 +132,8 @@
     align-items: stretch;
     padding: 56px 24px;
     gap: 36px;
+    border: 0;
+    border-radius: 0;
   }
 
   .clinic h2 {
