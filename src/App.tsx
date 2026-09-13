@@ -4,7 +4,7 @@ import About from "./components/about"
 import Services from "./components/services"
 import ServiceLocations from "./components/service-locations"
 import Clinic from "./components/clinic"
-import ClinicTour from "./components/clinic-tour"
+// import ClinicTour from "./components/clinic-tour"
 import Location from "./components/location"
 import Footer from "./components/footer"
 import WhatsappButton from "./components/whatsapp-button"
@@ -20,7 +20,7 @@ function App() {
     <Services/>
     <ServiceLocations/>
     <Clinic/>
-    <ClinicTour/>
+    {/* <ClinicTour/> */}
     <Location/>
     <Footer/>
     <WhatsappButton/>

@@ -1,6 +1,7 @@
 import "./about.css";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { useScrollReveal } from "../hooks/use-scroll-reveal";
+import aboutImage from "../../assets/sobre.png";
 
 function About() {
   const { ref, isVisible } = useScrollReveal<HTMLElement>();
@@ -13,7 +14,7 @@ function About() {
     >
       <div className="about">
         <div className="about__image">
-          <img src="./assets/sobre.png" alt="Carolina Fagundes" />
+          <img src={aboutImage} alt="Carolina Fagundes" />
         </div>
 
         <div className="about__content">

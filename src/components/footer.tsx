@@ -1,6 +1,7 @@
 import "./footer.css";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FiMail, FiMapPin } from "react-icons/fi";
+import logo from "../../assets/logo.png";
 
 const whatsappUrl = "https://api.whatsapp.com/send/?phone=5555996898896&text&type=phone_number&app_absent=0";
 
@@ -10,7 +11,7 @@ function Footer() {
       <div className="footer__content">
         <div className="footer__identity">
           <a className="footer__brand" href="#" aria-label="Voltar ao início">
-            <img src="./assets/logo.png" alt="Carolina Fagundes" />
+            <img src={logo} alt="Carolina Fagundes" />
           </a>
         </div>
 

@@ -1,6 +1,7 @@
 import "./header.css";
 import { useState } from "react";
 import { FaBars, FaTimes, FaWhatsapp } from "react-icons/fa";
+import logo from "../../assets/logo.png";
 
 const whatsappUrl = "https://api.whatsapp.com/send/?phone=5555996898896&text&type=phone_number&app_absent=0";
 
@@ -13,7 +14,7 @@ function Header() {
       <div className="container">
         <div className="header__primary">
           <a href="#" aria-label="Página inicial" onClick={closeMenu}>
-            <img className="header__logo" src="./assets/logo.png" alt="" />
+            <img className="header__logo" src={logo} alt="" />
           </a>
 
           <nav
