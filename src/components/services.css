@@ -1,0 +1,167 @@
+.services {
+  padding: 80px 40px;
+  margin-top: 50px;
+}
+
+.services__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: transparent;
+  opacity: 0;
+  transform: translateY(48px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+
+.services.is-visible .services__container {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.services__heading {
+  margin-bottom: 48px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.services__heading p {
+  margin-bottom: 8px;
+  background-color: transparent;
+  color: rgb(163, 113, 65);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.services__heading h2 {
+  background-color: transparent;
+  color: #d49884;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 20px;
+  background-color: transparent;
+}
+
+.services__card {
+  min-height: 220px;
+  padding: 32px 28px;
+  border: 1px solid #e9dbd7;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  background-color: rgb(255, 251, 244);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.services__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(212, 152, 132, 0.14);
+}
+
+.services__card h3 {
+  color: #d49884;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.services__card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.services__card-icon {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #b87d6a;
+}
+
+.services__card-icon svg {
+  flex: 0 0 auto;
+  color: #ffffff;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.services__card p {
+  color: rgb(163, 113, 65);
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.services__cta {
+  margin-top: 40px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.services__button {
+  padding: 10px 20px;
+  border-radius: 16px;
+  color: #ffffff;
+  background-color: #b87d6a;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.services__button svg {
+  background-color: unset;
+  font-size: 25px;
+}
+
+.services__button:hover {
+  background-color: #f7af97;
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 56px 24px;
+  }
+
+  .services__heading h2 {
+    font-size: 40px;
+  }
+
+  .services__container {
+    transform: translateY(28px);
+  }
+}
+
+@media (max-width: 520px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services__container {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

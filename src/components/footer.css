@@ -1,0 +1,128 @@
+.footer {
+  margin-top: 40px;
+  border-top: 1px solid #e9dbd7;
+  background-color: #ffffff;
+}
+
+.footer__content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: minmax(220px, 1.2fr) minmax(220px, 1fr) minmax(220px, 1fr);
+  align-items: start;
+  gap: 48px;
+  background-color: transparent;
+}
+
+.footer__identity,
+.footer__section,
+.footer__copyright,
+.footer__section h2,
+.footer__section address,
+.footer__section a,
+.footer__section span,
+.footer__section svg,
+.footer__brand {
+  background-color: transparent;
+}
+
+.footer__brand img {
+  max-width: 220px;
+  display: block;
+  background-color: transparent;
+}
+
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer__section h2 {
+  margin-bottom: 6px;
+  color: #d49884;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.footer__section address,
+.footer__section a {
+  color: rgb(163, 113, 65);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.footer__section address,
+.footer__section a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__section address {
+  align-items: flex-start;
+}
+
+.footer__section svg {
+  flex-shrink: 0;
+  color: #d49884;
+  font-size: 17px;
+}
+
+.footer__section address svg {
+  margin-top: 3px;
+}
+
+.footer__section a:hover {
+  color: #d49884;
+  text-decoration: underline;
+}
+
+.footer a:focus-visible {
+  outline: 2px solid #94543e;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.footer__copyright {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 40px 24px;
+  border-top: 1px solid #e9dbd7;
+  color: rgb(163, 113, 65);
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer__content {
+    grid-template-columns: 1fr;
+    padding: 36px 24px 28px;
+    gap: 28px;
+  }
+
+  .footer__identity {
+    padding-bottom: 4px;
+  }
+
+  .footer__brand img {
+    max-width: 180px;
+  }
+
+  .footer__section {
+    width: 100%;
+    padding-top: 24px;
+    border-top: 1px solid #e9dbd7;
+  }
+
+  .footer__copyright {
+    padding: 16px 24px 24px;
+  }
+}

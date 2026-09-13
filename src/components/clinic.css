@@ -1,0 +1,180 @@
+.clinic {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 250px;
+  border: 1px solid #fde2d8;
+  border-radius: 24px;
+}
+
+.clinic__content {
+  flex: 0 1 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  opacity: 0;
+  transform: translateX(-48px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+
+.clinic__eyebrow {
+  color: rgb(163, 113, 65);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.clinic h2 {
+  color: #d49884;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.clinic__description {
+  color: rgb(163, 113, 65);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.clinic__map-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border: 1px solid #f5c6b6;
+  border-radius: 999px;
+  background-color: transparent;
+  color: #b87d6a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.clinic__map-button svg,
+.clinic__map-button svg * {
+  background-color: transparent !important;
+  font-size: 18px;
+}
+
+.clinic__map-button:hover {
+  background-color: #b87d6a;
+  color: #ffffff;
+}
+
+.clinic__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  background-color: transparent;
+}
+
+.clinic__tags li {
+  padding: 8px 16px;
+  border: 1px solid #e9dbd7;
+  border-radius: 999px;
+  color: rgb(163, 113, 65);
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.clinic__tags li:first-child {
+  border-color: #a37141;
+  background-color: #b87d6a;
+  border: none;
+  color: #ffffff;
+}
+
+.clinic__image {
+  flex: 0 1 360px;
+  width: min(100%, 360px);
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  border-radius: 32px;
+  opacity: 0;
+  transform: translateX(48px);
+  transition: opacity 0.7s ease-out 0.1s, transform 0.7s ease-out 0.1s;
+  will-change: opacity, transform;
+}
+
+.clinic.is-visible .clinic__content,
+.clinic.is-visible .clinic__image {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.clinic__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .clinic__map-button {
+    display: none;
+  }
+
+  .clinic {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 56px 24px;
+    gap: 36px;
+  }
+
+  .clinic h2 {
+    font-size: 40px;
+  }
+
+  .clinic__content {
+    flex: initial;
+    width: 100%;
+    transform: translateY(28px);
+  }
+
+  .clinic__image {
+    flex-basis: auto;
+    margin: 0 auto;
+    transform: translateY(28px);
+  }
+
+  .clinic.is-visible .clinic__content,
+  .clinic.is-visible .clinic__image {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clinic__content,
+  .clinic__image {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .clinic {
+    padding: 48px 24px;
+  }
+
+  .clinic h2 {
+    font-size: 38px;
+  }
+
+  .clinic__image {
+    border-radius: 24px;
+  }
+}

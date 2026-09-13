@@ -1,0 +1,290 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  gap: 60px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  animation: heroContent 0.6s ease-out;
+}
+
+
+
+.hero-desc {
+    display: flex;
+    gap: 5px;
+}
+
+
+.heroTittle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.descIcon {
+    font-size: 24px;
+    color: #d49884;
+}
+
+.hero-desc p {
+    color: rgb(163, 113, 65);
+    font-size: 13pt;
+    font-family: inter;
+
+}
+
+@keyframes heroContent {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-content h1 {
+  font-size: 90px;
+  line-height: 0.9;
+  color: #d49884;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pre-tittle {
+  font-size: 32px;
+  letter-spacing:3px;
+  border-radius: 16px;
+  color: rgb(163, 113, 65);
+  font-weight: 300;
+  font-style: italic;
+  padding-left: 10px;
+
+}
+
+.hero-p {
+    color: rgb(163, 113, 65);
+    letter-spacing: 1px;
+    font-size: 15pt;
+    font-style: italic;
+    padding-left: 10px;
+
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.arrow {
+    color: white;
+    background-color:unset;
+
+}
+
+.hero-buttons .cta1 {
+    padding: 15px;
+    border-radius: 16px;
+    border-style: none;
+    background-color: #b87d6a;
+    font-family: inter;
+    color: #fcfcfc;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.hero-buttons .cta1:hover {
+    background-color: #f7af97;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 3px rgba(255, 216, 216, 0.507);
+
+}
+
+.hero-buttons .cta2 {
+    padding: 15px;
+    border-radius: 16px;
+    border-style: none;
+    border: 1px solid #e9dbd7;
+    font-family: Inter;
+    font-weight: 600;
+    color: #94543e;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.hero-buttons .cta2:hover {
+    transform: translateY(-2px);
+    border: 1px solid rgb(255, 237, 211);
+
+}
+
+
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: heroImage 0.6s ease-out;
+}
+
+.hero-image__frame {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-image__branch {
+  position: absolute;
+  top: -72px;
+  left: -190px;
+  z-index: 0;
+  width: 340px;
+  max-width: none;
+  opacity: 0.72;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.hero-image__branch--bottom {
+  top: auto;
+  right: -190px;
+  bottom: -72px;
+  left: auto;
+  transform: rotate(180deg);
+}
+
+
+@keyframes heroImage {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-image__portrait {
+  position: relative;
+  z-index: 1;
+  max-width: 450px;
+  border-radius: 60px;
+}
+
+@media (max-width: 960px) {
+  .hero {
+    padding: 64px 32px;
+    gap: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 70px;
+  }
+
+  .hero-image__portrait {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 56px 24px;
+  }
+
+  .hero-content {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 58px;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-desc,
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image__portrait {
+    max-height: none;
+    max-width: min(100%, 450px);
+  }
+
+  .hero-image__branch {
+    top: -58px;
+    left: -150px;
+    width: 280px;
+  }
+
+  .hero-image__branch--bottom {
+    top: auto;
+    right: -150px;
+    bottom: -58px;
+    left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    gap: 24px;
+  }
+
+  .hero-content h1 {
+    font-size: 46px;
+  }
+
+  .pre-tittle {
+    padding-left: 0;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .hero-p {
+    padding-left: 0;
+  }
+
+  .hero-desc p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: min(100%, 360px);
+  }
+
+  .hero-buttons .cta1,
+  .hero-buttons .cta2 {
+    width: 100%;
+    justify-content: center;
+  }
+}

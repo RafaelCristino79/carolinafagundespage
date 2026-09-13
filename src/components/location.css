@@ -1,0 +1,137 @@
+.location {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.location__content,
+.location__map {
+  flex: 1;
+  opacity: 0;
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+
+.location__content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  transform: translateX(-48px);
+}
+
+.location__map {
+  transform: translateX(48px);
+  transition-delay: 0.1s;
+}
+
+.location.is-visible .location__content,
+.location.is-visible .location__map {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.location__eyebrow {
+  margin-bottom: 8px;
+  color: rgb(163, 113, 65);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.location h2 {
+  color: #d49884;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.location__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.location__contacts address {
+  color: rgb(163, 113, 65);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.location__contacts svg {
+  color: #d49884;
+  font-size: 24px;
+}
+
+.location__contacts address svg {
+  margin-top: 3px;
+}
+
+.location__map iframe {
+  width: 100%;
+  min-height: 450px;
+  border: 0;
+  border-radius: 32px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .location {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 56px 24px;
+    gap: 36px;
+  }
+
+  .location__content {
+    gap: 32px;
+    transform: translateY(28px);
+  }
+
+  .location__map {
+    transform: translateY(28px);
+  }
+
+  .location.is-visible .location__content,
+  .location.is-visible .location__map {
+    transform: translateY(0);
+  }
+
+  .location h2 {
+    font-size: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .location__content,
+  .location__map {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .location {
+    padding: 48px 24px;
+  }
+
+  .location h2 {
+    font-size: 38px;
+  }
+
+  .location__map iframe {
+    min-height: 360px;
+    border-radius: 24px;
+  }
+}
