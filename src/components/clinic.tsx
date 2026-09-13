@@ -40,7 +40,7 @@ function Clinic() {
       </div>
 
       <div className="clinic__image">
-        <img src={clinicImage} alt="Espaço de atendimento da Climed" />
+        <img src={clinicImage} alt="Espaço de atendimento da Climed" className="hero-image__portrait"/>
       </div>
     </section>
   );

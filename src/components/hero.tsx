@@ -2,6 +2,7 @@ import "./hero.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import branch from "../../assets/Ramo.png";
+import heroImage from "../../assets/carol.jpeg"
 
 const whatsappUrl =
   "https://api.whatsapp.com/send/?phone=5555996898896&text&type=phone_number&app_absent=0";
@@ -50,7 +51,7 @@ function Hero() {
             alt=""
             aria-hidden="true"
           />
-          <img className="hero-image__portrait" src="./assets/carol.jpeg" alt="Carolina Fagundes" />
+          <img src={heroImage} alt="Foto da Carolina" className="hero-image__portrait" />
         </div>
       </div>
     </section>
